@@ -5,6 +5,7 @@ let getComputerChoice = function () {
 }
 // console.log(getComputerChoice())
 let playRound = function (playerSelection, computerSelection) {
+ 
   if (playerSelection == 'PEDRA' && computerSelection == 'PEDRA') {
     return 'EMPATE'
   } else if (playerSelection == 'PEDRA' && computerSelection == 'TESOURA') {
@@ -26,8 +27,8 @@ let playRound = function (playerSelection, computerSelection) {
   }
 }
 
-const playerSelection = 'PAPEL'
-const computerSelection = getComputerChoice()
-
+let playerValor = 'pedra'
+let computerSelection = getComputerChoice()
+let playerSelection = playerValor.toUpperCase()
 console.log(playRound(playerSelection, computerSelection))
-console.log(playerSelection, computerSelection)
+
