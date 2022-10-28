@@ -5,26 +5,36 @@ let getComputerChoice = function () {
 }
 // console.log(getComputerChoice())
 let playRound = function (playerSelection, computerSelection) {
- 
-  if (playerSelection == 'PEDRA' && computerSelection == 'PEDRA') {
-    return 'EMPATE'
-  } else if (playerSelection == 'PEDRA' && computerSelection == 'TESOURA') {
-    return 'PLAYER GANHOU'
-  } else if (playerSelection == 'PEDRA' && computerSelection == 'PAPEL') {
-    return 'PLAYER PERDEU'
-  } else if (playerSelection == 'PAPEL' && computerSelection == 'PEDRA') {
-    return 'PLAYER GANHOU'
-  } else if (playerSelection == 'PAPEL' && computerSelection == 'PAPEL') {
-    return 'EMPATE'
-  } else if (playerSelection == 'PAPEL' && computerSelection == 'TESOURA') {
-    return 'PLAYER PERDEU'
-  } else if (playerSelection == 'TESOURA' && computerSelection == 'PEDRA') {
-    return 'PLAYER PERDEU'
-  } else if (playerSelection == 'TESOURA' && computerSelection == 'PAPEL') {
-    return 'PLAYER GANHOU'
-  } else if (playerSelection == 'TESOURA' && computerSelection == 'TESOURA') {
-    return 'PLAYER GANHOU'
+  if (playerSelection == "PEDRA"){
+    if(computerSelection == 'PEDRA'){
+      return 'EMPATE'
+    }else if(computerSelection == "TESOURA"){
+      return 'PLAYER GANHOU'
+    } else{
+      return 'PLAYER PERDEU'
+    }
   }
+
+  else if (playerSelection == 'PAPEL'){
+    if(computerSelection == 'PEDRA'){
+      return 'PLAYER GANHOU'
+    }else if(computerSelection == "TESOURA"){
+      return 'PLAYER PERDEU'
+    } else{
+      return 'EMPATE'
+    }
+  }
+  
+  else if (playerSelection == 'TESOURA'){
+    if(computerSelection == 'PEDRA'){
+      return 'PLAYER PERDEU'
+    }else if(computerSelection == "TESOURA"){
+      return 'EMPATE'
+    } else{
+      return 'PLAYER GANHOU'
+    }
+  }
+
 }
 
 let playerValor = 'pedra'
